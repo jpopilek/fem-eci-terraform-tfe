@@ -6,9 +6,10 @@ locals {
   }
   workspace = {
     "fem-eci-tfe" = {
-      description    = "Example workspace description"
-      execution_mode = "local"
-      project_id     = module.project["fem-eci-project"].id
+      description         = "Example workspace description"
+      execution_mode      = "remote"
+      project_id          = module.project["fem-eci-project"].id
+      vcs_repo_identifier = "jpopilek/fem-eci-terraform-tfe"
     }
   }
 }

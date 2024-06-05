@@ -6,6 +6,8 @@
 - variables.tf - constants that are unchaning like project ids or keys
 - backend.tf - sets up project to sync state with terraform cloud
 - locals.tf - locals can be used to define resources that are then passed into main.tf's modules
+- variables.tf - is used to represent values that are likely to change
+- data.tf - is ued to tell terraform it needs to look something up
 
 ### important terraform commands
 
