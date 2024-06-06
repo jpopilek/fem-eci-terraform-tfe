@@ -63,12 +63,31 @@ locals {
         {
           category = "terraform"
           key      = "name"
-          value    = "fem-eci-jpopilek"
+          value    = "fem-eci-jpopilek-prod"
         },
         {
           category = "terraform"
           key      = "vpc_name"
           value    = "fem-eci"
+        },
+      ]
+    }
+    "fem-eci-product-service-prod" = {
+      description         = "Automation for product service resources."
+      execution_mode      = "remote"
+      project_id          = module.project["fem-eci-project"].id
+      vcs_repo_identifier = "${var.github_organization_name}/fem-eci-terraform-product-service"
+
+      variables = [
+        {
+          category = "terraform"
+          key      = "cluster_name"
+          value    = "fem-eci-jpopilek-prod"
+        },
+        {
+          category = "terraform"
+          key      = "environment"
+          value    = "prod"
         },
       ]
     }
